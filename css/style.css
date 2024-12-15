@@ -107,4 +107,87 @@ body {
 #humberger-menu {
     display: none;
 }
+
+/* Media Queries */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */ 
+
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #humberger-menu {
+        display: inline-block;
+    }
+
+    .navbar .container .navbar-nav {
+        position: absolute;
+        width: 30rem;
+        height: 50vh;
+        top: 100%;
+        right: -100%;
+        background-color: black;
+        border-radius: 10px;
+        padding: 1rem;
+        transition: 0.5s;
+    }
+
+    .navbar .container .navbar-nav.active {
+        right: 0;
+        margin-right: 20px
+    }
+
+    .navbar .container .navbar-nav .sign-nav {
+        display: flex;
+        margin: 1rem;
+        
+    }
+
+    .navbar .container .navbar-nav .sign-nav a {
+        background-color: rgb(128, 128, 128, 0.5);
+        padding: 0.5rem;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+    }
+    .navbar .container .navbar-nav .sign-nav .button-sign {
+        text-align: center;
+        width: 100px
+    }
+
+    .navbar .container .navbar-nav a {
+        display: block;
+        font-size: 1rem;
+    }
+
+    .navbar .container .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .container .navbar-nav a:hover:after {
+        transform: scaleX(0.2)
+    }
+
+
+    .navbar .container .extra-navbar .sign-nav a, img{
+        display: none;
+    }
+}
+
+/* Mobile phone */
+
+@media(max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
 /* Navbar end */
